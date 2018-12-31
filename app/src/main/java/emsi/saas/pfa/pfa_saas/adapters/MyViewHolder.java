@@ -43,5 +43,6 @@ public class MyViewHolder extends RecyclerView.ViewHolder{
         textViewDate.setText(myObject.getDate_assemble());
         textViewDuree.setText(Integer.toString(myObject.getDuree_assemble())+" min");
         img.setImageResource(R.drawable.calendar);
+
     }
 }
