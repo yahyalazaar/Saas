@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">pfa_saas</string>
+    <string name="app_name">PFA SAAS</string>
     <string name="mot_de_passe">Mot de passe</string>
     <string name="s_authentifier">S\'authentifier</string>
     <string name="email">Email</string>
