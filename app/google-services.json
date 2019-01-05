@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1058505365602",
+    "firebase_url": "https://pfasaas.firebaseio.com",
+    "project_id": "pfasaas",
+    "storage_bucket": "pfasaas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1058505365602:android:1eeab458fcfeb1f5",
+        "android_client_info": {
+          "package_name": "emsi.saas.pfa.pfa_saas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1058505365602-sjogs0uvn4chilrvpkmfkodhip8prdqm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "emsi.saas.pfa.pfa_saas",
+            "certificate_hash": "39b7306dfad6ffdf1df696fd77a877bb65cda003"
+          }
+        },
+        {
+          "client_id": "1058505365602-s6j7cg2fc8cg899jrkj3hg3h2hvo83h8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUU3o2VC_fl2L5TjcAxfhYLspXX6ogfXI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1058505365602-s6j7cg2fc8cg899jrkj3hg3h2hvo83h8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

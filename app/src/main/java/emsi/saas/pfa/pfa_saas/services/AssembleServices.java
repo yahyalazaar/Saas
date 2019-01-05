@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,16 +49,19 @@ public class AssembleServices {
 
     public void Assembles() {
         class GetJSON extends AsyncTask<Void, Void, String> {
+            LinearLayout linlaHeaderProgress = (LinearLayout) AllAssembles.getContext().findViewById(R.id.linlaHeaderProgress);
 
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+                linlaHeaderProgress.setVisibility(View.VISIBLE);
             }
 
             @Override
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
-                Toast.makeText(AllAssembles.getContext(), s, Toast.LENGTH_SHORT).show();
+             //   Toast.makeText(AllAssembles.getContext(), "Loadin", Toast.LENGTH_SHORT).show();
+                linlaHeaderProgress.setVisibility(View.GONE);
                 try {
                     loadIntoListView(s);
 
@@ -70,7 +74,7 @@ public class AssembleServices {
             @Override
             protected String doInBackground(Void... voids) {
                 try {
-                    URL url = new URL("http://192.168.1.55/pfa_saas/index.php");
+                    URL url = new URL("http://cf553cf4.ngrok.io/pfa_saas/index.php");
                     HttpURLConnection con = (HttpURLConnection) url.openConnection();
                     StringBuilder sb = new StringBuilder();
                     BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
@@ -168,6 +172,7 @@ public class AssembleServices {
             @Override
             protected void onPreExecute() {
                 super.onPreExecute();
+
             }
 
             @Override
@@ -190,7 +195,7 @@ public class AssembleServices {
 
                 StringBuilder str = new StringBuilder();
                 HttpClient client = new DefaultHttpClient();
-                final HttpPost httpPost = new HttpPost("http://192.168.1.55/pfa_saas/addVote.php");
+                final HttpPost httpPost = new HttpPost("http://cf553cf4.ngrok.io/pfa_saas/addVote.php");
                 try {
                     httpPost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
                     HttpResponse response = client.execute(httpPost);
